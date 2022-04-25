@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
@@ -58,12 +59,16 @@ class Square extends React.Component {
       );
     }
   }
+
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<Game />);
   
   // ========================================
   
-  ReactDOM.render(
-    <Game />,
-    document.getElementById('root')
-  );
+//   ReactDOM.render(
+//     <Game />,
+//     document.getElementById('root')
+//   );
   
   
